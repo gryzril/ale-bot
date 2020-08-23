@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/gryzril/ale-bot/issues"
   },
-  "homepage": "https://github.com/gryzril/ale-bot#readme"
+  "homepage": "https://github.com/gryzril/ale-bot#readme",
+  "engines": {
+    "node": "12.x"
+  }
 }
