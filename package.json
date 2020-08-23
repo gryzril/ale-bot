@@ -1,11 +1,7 @@
 {
-  "name": "ale-bot",
+  "name": "alebot",
   "version": "1.0.0",
-  "engines": {
-    "node": "12.18.3"
-  },
-
-  "description": "A bot of my buddy alex",
+  "description": "Alebot",
   "main": "index.js",
   "dependencies": {
     "discord.js": "^12.2.0",
@@ -16,16 +12,17 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gryzril/ale-bot.git"
   },
   "keywords": [
-    "alebot"
+    "test"
   ],
-  "author": "Riley Gryzwa",
+  "author": "riley-gryzwa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gryzril/ale-bot/issues"
