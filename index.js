@@ -102,6 +102,7 @@ bot.on('message', async message => {
 //Forces AleBot to leave discord
 bot.on('message', async message => {
     if (message.content.toLowerCase() === "?leave") {
+        const voiceChannel = message.member.voice.channel;
         voiceChannel.leave();
     }
 
