@@ -111,7 +111,7 @@ bot.on('message', async message => {
 
 
 
-
+//Currenly non-functional
 bot.on('message', async message => {
 
     if (message.content === "setScare") {
@@ -135,13 +135,32 @@ bot.on('message', async message => {
    
 });
 
-
 bot.on('message', async message => {
-    if (message.content === '?createChaos') {
-        var users = bot.users;
-        console.log(users[0]);
+
+    if (message.content.toLowerCase === "?setRole") {
+        const user = message.guild.members.cache.get();
+
+        var splitArr = message.content.split(" ");
+        if (splitArr.length !== 3) {
+            console.log("Invalid setRole syntax");
+            return;
+        }
+        var name = splitArr[1];
+        var color = splitArr[2];
+
+        const newRole = guild.roles.create({
+            data: {
+                name: name,
+                color: color,
+            },
+            reason: "AleBot has spoken",
+        })
+        .then(console.log)
+            .catch(console.error);
+
+
+        user.addRole(newRole).catch(console.error);
+        
     }
-
-});
-
+})
 
