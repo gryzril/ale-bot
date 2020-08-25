@@ -137,7 +137,7 @@ bot.on('message', async message => {
 
 bot.on('message', async message => {
 
-    if (message.content.toLowerCase === "?setRole") {
+    if (message.content.toLowerCase === "?setrole") {
         const user = message.guild.members.cache.get();
 
         var splitArr = message.content.split(" ");
