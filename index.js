@@ -158,8 +158,9 @@ bot.on('message', async message => {
         .then(console.log)
             .catch(console.error);
 
+        var role = message.guild.roles.find(role => role.name === name);
 
-        user.addRole(newRole).catch(console.error);
+        message.member.addRole(role);
         
     }
 })
