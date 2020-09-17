@@ -108,8 +108,9 @@ bot.on('message', async message => {
             const stream = ytdl('https://www.youtube.com/watch?v=yGQoZDiWkwE', { filter: 'audioonly' });
             const dispatcher = connection.play(stream);
             dispatcher.on('finish', () => voiceChannel.leave());
+        }
     }
-})
+});
 
 
 //Forces AleBot to leave discord
