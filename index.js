@@ -99,6 +99,19 @@ bot.on('message', async message => {
     } 
 });
 
+//Confusion Function
+bot.on('message', async message => {
+    if (message.content.toLowerCase() === "im confused") {
+        const voiceChannel = message.member.voice.channel;
+        if (voiceChannel) {
+            const connection = await message.member.voice.channel.join();
+            const stream = ytdl('https://www.youtube.com/watch?v=yGQoZDiWkwE', { filter: 'audioonly' });
+            const dispatcher = connection.play(stream);
+            dispatcher.on('finish', () => voiceChannel.leave());
+    }
+})
+
+
 //Forces AleBot to leave discord
 bot.on('message', async message => {
     if (message.content.toLowerCase() === "?leave") {
@@ -136,9 +149,17 @@ bot.on('message', async message => {
 });
 
 bot.on('message', async message => {
+    if (!message.guild) {
+        return;
+    }
 
-    if (message.content.toLowerCase === "?setrole") {
+    guild = message.guild;
+
+    if (message.content.toLowerCase().includes("?setrole")) {
         const user = message.guild.members.cache.get();
+       
+
+        console.log("Test");
 
         var splitArr = message.content.split(" ");
         if (splitArr.length !== 3) {
@@ -163,5 +184,6 @@ bot.on('message', async message => {
         message.member.addRole(role);
         
     }
+
 })
 
