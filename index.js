@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 const fs = require('fs');
 
 
-const token = 'NzQzMjc1OTExOTU2MjY3MTQx.XzSTog.OcYae_i8SgQKhH9ojrrMqXsqu_Y';
+const token = '#####################################';
 
 bot.on('ready', () =>{
     console.log('AleBot is Online')
