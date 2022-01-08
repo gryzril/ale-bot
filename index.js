@@ -48,7 +48,7 @@ bot.on('message', async message => {
     }
 });
 
-//Plays shitty quality clip
+//Plays poor quality clip
 bot.on('message', async message => {
     if (!message.guild) return;
 
