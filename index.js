@@ -31,7 +31,7 @@ bot.login(token);
 bot.on('message', async message => {
     if (!message.guild) return;
 
-    if (message.content.toLowerCase().includes("?play") & !message.content.toLowerCase().includes("shit")) {
+    if (message.content.toLowerCase().includes("?play") & !message.content.toLowerCase().includes("garbage")) {
         const voiceChannel = message.member.voice.channel;
         if (voiceChannel) {
             const connection = await message.member.voice.channel.join();
