@@ -52,7 +52,7 @@ bot.on('message', async message => {
 bot.on('message', async message => {
     if (!message.guild) return;
 
-    if (message.content.toLowerCase().includes("?play shit")) {
+    if (message.content.toLowerCase().includes("?play garbage")) {
         const voiceChannel = message.member.voice.channel;
         if (voiceChannel) {
             const connection = await message.member.voice.channel.join();
